@@ -8,7 +8,7 @@ const refs = {
     textarea: document.querySelector('.feedback-form textarea'),
     input: document.querySelector('.feedback-form input'),
 };
-     
+     console.log(refs.form)
     
  refs.form.addEventListener('submit', onFormSubmit);
  refs.textarea.addEventListener('input', throttle(onTextareaInput, 500));
@@ -19,6 +19,7 @@ populateTextarea();
 function onTextareaInput(e) {
     const message = e.target.value;
     localStorage.setItem('STORAGE_KEY', JSON.stringify(message));  
+    
 }
 
 function onFormSubmit(e) {
