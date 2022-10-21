@@ -9,8 +9,8 @@ const refs = {
 const STORAGE_KEY = "feedback-form-state";
 const formData = {};
      
- refs.form.addEventListener('submit', onFormSubmit);
- refs.form.addEventListener('input', throttle(onTextareaInput, 500));
+refs.form.addEventListener('submit', onFormSubmit);
+refs.form.addEventListener('input', throttle(onTextareaInput, 500));
  
 
 function onTextareaInput(e) {
@@ -41,6 +41,7 @@ function populateTextarea() {
         refs.input.value = savedMessage.email;
     }
 };
+
 populateTextarea();
 
 
