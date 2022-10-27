@@ -32,7 +32,7 @@ function onTextareaInput(e) {
 
 
 function populateTextarea() {
-    const savedMessage = localStorage.getItem("feedback-form-state");
+    const savedMessage = localStorage.getItem(STORAGE_KEY);
     const parsedMessage = JSON.parse(savedMessage);
         if (savedMessage) {        
             if (parsedMessage.email) {
@@ -50,3 +50,8 @@ populateTextarea();
 
 
 
+// if (parsedMessage) {
+//       formData = parsedMessage;
+//       refs.input.value = formData.email || '';
+//       refs.textarea.value = formData.message || '';
+//     }
